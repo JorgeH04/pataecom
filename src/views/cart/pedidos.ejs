@@ -1,0 +1,129 @@
+<% include ../partials/_header %>
+
+
+      
+<div class="col-md-12 ">
+        <% orders.forEach(function (order) { %>
+
+<table class="table table-bordered table-hover mt-5">
+ <thead>
+     <tr>
+    
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Precio Total</th>
+        
+     </tr>
+</thead>
+<tbody>
+              
+               
+    
+                   <tr>
+                        <% order.items.forEach(function (item) { %>
+
+                        <td><%= item.item.title %></td>
+                        <td><%= item.qty %></td>
+                        <td><%= item.price %></td>
+
+                    </tr>
+                </tbody>
+                
+                     <tr>
+                        <% }) %>
+
+
+              
+
+                       
+
+                        <td>Nombre: <%= order.name %></td>
+                        <td>Número  <%= order.number %></td>
+                        <td>Dirección:  <%= order.address %></td>
+                        <td>Fecha:  <%= order.fecha %></td>
+                
+                        </tr>
+                
+                        <% }) %>    
+                
+
+
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+      
+
+
+<div class="col-12">
+        <div class="row">
+              <!-- pagination -->
+              <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+                <nav  class="mx-auto" style="margin-bottom: 50px">
+                  <ul class="pagination">
+                    <!-- FIRST ITEM -->
+                    <% if(current == 1) { %>
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#">First</a>
+                      </li>
+                    <% } else { %>
+                      <li class="page-item">
+                        <a class="page-link" href="/pedidos/1">First</a>
+                      </li>
+                    <% } %>
+                    <!-- ITEMS  -->
+                    <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                    <% if(i !== 1) { %>
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#">...</a>
+                      </li>
+                    <% } %>
+                    <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                      <% if(i == current) { %>
+                        <li class="page-item active">
+                          <a class="page-link" href="<%= i %>">
+                            <%= i %>
+                          </a>
+                        </li>
+                      <% } else { %>
+                        <li class="page-item">
+                          <a class="page-link" href="/pedidos/<%= i %>">
+                            <%= i %>
+                          </a>
+                        </li>
+                      <% } %>
+                      <% if (i == Number(current) + 4 && i < pages) { %>
+                         <li class="page-item disabled">
+                           <a class="page-link" href="#">...</a>
+                         </li>
+                      <% } %>
+                    <% } %>
+                    <!-- LAST ITEM -->
+                    <% if(current == pages) { %>
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                          Last
+                        </a>
+                      </li>
+                    <% } else { %>
+                      <li class="page-item">
+                        <a class="page-link" href="/pedidos/<%= pages %>">
+                          Last
+                        </a>
+                      </li>
+                    <% } %>
+                  </ul>
+                </nav>
+              <% } %>
+            </div>
+          </div>
+  
+          
+
+
+
+<% include ../partials/_footer %>      

@@ -1,0 +1,31 @@
+<% include ../partials/_header %>
+
+
+
+  <div class="row mt-5">
+    <% prodcinco.forEach(function (prodcinc) { %>
+      <div class="col-md-3 wow slideInDown">
+       <div class="card"> 
+          <a href="/prodcincoredirect/<%= prodcinc.id %>">
+         <img class="card-img-top img-fluid" alt="img1" src="<%= prodcinc.imagePath %>">
+          </a>
+          <div class="card-body">
+        <div class="card-heading"><%= prodcinc.product %></div>
+        <h4> $<%= prodcinc.price %>  </h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit neque, mollitia dolorem. </p>
+        <a class="btn btn-pink text-light"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a> </div>
+        </div>
+  </div>
+  <% }) %>
+
+
+
+</div>
+     
+</div>
+</div>
+
+
+
+
+  <% include ../partials/_footer %>

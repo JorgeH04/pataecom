@@ -1,0 +1,27 @@
+<% include ../partials/_header %>
+
+
+
+  <div class="row mt-5">
+    <% prodseis.forEach(function (prodsei) { %>
+      <div class="col-md-3 wow slideInDown">
+       <div class="card"> 
+          <a href="/prodseisredirect/<%= prodsei.id %>">
+         <img class="card-img-top img-fluid" alt="img1" src="<%= prodsei.imagePath %>">
+          </a>
+          <div class="card-body">
+        <div class="card-heading"><%= prodsei.product %></div>
+        <h4> $<%= prodsei.price %>  </h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit neque, mollitia dolorem. </p>
+        <a class="btn btn-pink text-light"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a> </div>
+        </div>
+  </div>
+  <% }) %>
+
+
+
+
+
+
+
+  <% include ../partials/_footer %>

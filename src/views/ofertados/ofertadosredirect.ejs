@@ -1,0 +1,71 @@
+<% include ../partials/_header %>
+
+
+
+<div class="content-area prodcuts">
+
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1">
+                <li><a href="/">Home</a></li>
+                <li><a href="/produnoindex/1">Products</a></li>
+                <li class="active">Digital Camera</li>
+            </ol>
+    
+            <div class="single-product">
+                <div class="row" id="">
+                    <div class="col-md-6 single-top-left">  
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="<%= ofertados.image %>">
+                                    <div class="thumb-image detail_images"> <img src="<%= ofertados.image %>" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                                </li>
+                                <li data-thumb="<%= ofertados.image %>">
+                                    <div class="thumb-image"> <img src="<%= ofertados.image %>" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+                                </li>
+                                <li data-thumb="<%= ofertados.imagetres %>">
+                                    <div class="thumb-image"> <img src="<%= ofertados.imagetres %>" data-imagezoom="true" class="img-responsive" alt="" />  </div>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 single-top-right">
+                        <h3 class="item_name"><%= ofertados.title %></h3>
+                        <p>Processing Time: Item will be shipped out within 2-3 working days. </p>
+                        
+                        <div class="single-price">
+                            <ul>
+                                <li class="product-price">$540</li>  
+                                <li><del>$600</del></li> 
+                                <li><span class="off">10% OFF</span></li> 
+                                <li>Ends on: June,5th</li>
+                                <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Coupon</a></li>
+                            </ul>   
+                        </div> 
+                        <p class="single-price-text"><%= ofertados.description %>. </p>
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart" />
+                            <input type="hidden" name="add" value="1" /> 
+                            <input type="hidden" name="w3ls_item" value="Snow Blower" /> 
+                            <input type="hidden" name="amount" value="540.00" /> 
+                            <a href="/addtocardofertados/<%= ofertados.id %>" class="btn btn-red" role="button"><i class="fa fa-cart-plus" aria-hidden="true"></i>Agregar al carro</a>                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="clearfix"> </div>  
+                </div>
+              
+    
+         
+        
+        
+            </div>
+    
+    
+
+
+
+
+
+
+
+<% include ../partials/_footer %>

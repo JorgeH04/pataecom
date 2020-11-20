@@ -1,0 +1,188 @@
+<% include ../partials/_header %>
+
+    
+<div class="content-area mt-5">
+
+        <div class="account-page">
+            <div class="container">
+    
+              <div class="row">
+                <div class="col-sm-3">
+                    <h2>Mi cuenta</h2>
+                    <ul>
+                        <li  class="active">Panel de Control</li>
+                        <li>Información Personal</li>
+                        <li>Todas mis Compras</li>
+
+                    </ul>
+                </div>
+
+                
+
+                <div class="col-sm-9">
+                    <h2>Panel del Control de mi cuenta</h2>
+                    <strong>Estimado :</strong><br />
+                    <p>En esta sección figurarán sus datos personales sumado a todas las compras efectuadas.</p>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="well">
+                                <h3>Datos Personales</h3>
+                                <strong>Nombre:</strong> : ></br>
+                                <strong>Email:</strong> : </p>
+                                <p><a href="account_change_email.html">Change Email</a> | <a href="account_change_password.html">Change Password</a></p>
+                                <p class="pull-right"><a href="#"><i class="fa fa-edit"></i> Edit</a></p>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+     
+                        <div class="col-md-6 col-sm-6">
+                            
+                            <div class="well">
+                            <h3>Dirección de delivery por defecto</h3>
+                                <address class="address">
+                                    <strong>Dirección:</strong>  <br />
+                                    <strong>Teléfono:</strong> <br />
+                                </address>
+                                <p class="pull-right"><a href="#"><i class="fa fa-edit"></i> Edit</a></p>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+ 
+                        <div class="col-md-12">
+               
+                                <table class="table table-bordered table-hover">
+                                  <thead>
+                         <tr>
+                            
+                                <th>N°</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio Total</th>
+                                <th>Fecha</th>
+                         </tr>
+                        </thead>
+                        <tbody>
+
+                            
+
+
+                                      
+                        
+                                        <% orders.forEach(function (order) { %>
+                            
+                                                <tr>
+                                                <% order.items.forEach(function (item) { %>
+                                                <td> </td>
+                                                <td><%= item.item.title %></td>
+                                        
+                                                <td><%= item.qty %></td>
+                                                <td><%= item.price %></td>
+                                        
+                                                <% }) %>
+                                                
+                                              
+                                        
+                                                <% }) %>    
+                                        
+                        
+                               
+                        </tbody>
+                        </table>
+                        
+                        </div>
+                        </div>
+                        
+                        </div>
+
+
+
+
+
+                        <div class="col-12">
+                                <div class="row">
+                                      <!-- pagination -->
+                                      <% if(pages > 0) { %> <!-- show pagination if there is pages -->
+                                        <nav  class="mx-auto" style="margin-bottom: 50px">
+                                          <ul class="pagination">
+                                            <!-- FIRST ITEM -->
+                                            <% if(current == 1) { %>
+                                              <li class="page-item disabled">
+                                                <a class="page-link" href="#">First</a>
+                                              </li>
+                                            <% } else { %>
+                                              <li class="page-item">
+                                                <a class="page-link" href="/perfil/1">First</a>
+                                              </li>
+                                            <% } %>
+                                            <!-- ITEMS  -->
+                                            <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                                            <% if(i !== 1) { %>
+                                              <li class="page-item disabled">
+                                                <a class="page-link" href="#">...</a>
+                                              </li>
+                                            <% } %>
+                                            <% for(; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                                              <% if(i == current) { %>
+                                                <li class="page-item active">
+                                                  <a class="page-link" href="<%= i %>">
+                                                    <%= i %>
+                                                  </a>
+                                                </li>
+                                              <% } else { %>
+                                                <li class="page-item">
+                                                  <a class="page-link" href="/perfil/<%= i %>">
+                                                    <%= i %>
+                                                  </a>
+                                                </li>
+                                              <% } %>
+                                              <% if (i == Number(current) + 4 && i < pages) { %>
+                                                 <li class="page-item disabled">
+                                                   <a class="page-link" href="#">...</a>
+                                                 </li>
+                                              <% } %>
+                                            <% } %>
+                                            <!-- LAST ITEM -->
+                                            <% if(current == pages) { %>
+                                              <li class="page-item disabled">
+                                                <a class="page-link" href="#">
+                                                  Last
+                                                </a>
+                                              </li>
+                                            <% } else { %>
+                                              <li class="page-item">
+                                                <a class="page-link" href="/perfil/<%= pages %>">
+                                                  Last
+                                                </a>
+                                              </li>
+                                            <% } %>
+                                          </ul>
+                                        </nav>
+                                      <% } %>
+                                    </div>
+                                  </div>
+                          
+
+                        
+                       
+    
+    
+                    </div>
+                </div>
+            </div> <!--End Row-->
+    
+        </div>
+    </div> <!--End Account page div-->
+    
+    </div> <!-- End content Area class -->
+
+
+   
+   
+
+    <% include ../partials/_footer %>
+
+
+
+ 

@@ -1,0 +1,142 @@
+<% include ../partials/_header %>
+
+
+
+<div class="col-md-4 mx-auto">
+    <div class="card text-center">
+       
+      <div class="card-header mt-5">
+        <h3>Agregue un nuevo producto</h3>
+      </div>
+  
+    
+      <div class="card-body">
+          <form action="/searchback" method="GET">
+            <div class="form-group" >
+                <div class="input-group">
+                    <input type="text"  name="search" class="form-control border-dark" placeholder="Buscar productos" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-dark"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form action="/produno/new-produno" method="POST">
+  
+  
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="name" autofocus/>
+          </div>
+           <div class="form-group">
+            <input type="text" name="title" class="form-control" placeholder="title" autofocus/>
+           </div>
+           <div class="form-group">
+              <input type="text" name="image" class="form-control" placeholder="imagen 1" autofocus/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" autofocus/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" autofocus/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="description" class="form-control" placeholder="descripcion" autofocus/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="color" class="form-control" placeholder="color" autofocus/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="colorstock" class="form-control" placeholder="color stock" autofocus/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="filtroprice" class="form-control" placeholder="filtro de precio" autofocus/>
+            </div>
+            <div class="form-group">
+              <input type="text" name="price" class="form-control" placeholder="precio" autofocus/>
+            </div>
+            <div class="form-group">
+                    <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" autofocus/>
+            </div>
+           
+  
+  
+  
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    
+
+          <div class="all-products">
+              <div class="">
+                  <h2 class="title-div wow slideInRight" data-wow-duration="1s" data-wow-delay="0s" data-wow-offset="10">Our Latest Products available</h2>
+                  <div class="products">
+                      <div class="row">
+
+                      <% produno.forEach(function (produn) { %>
+                          <div class="col-md-3">
+                              <div class="product-item">
+                                  <div class="product-borde-inner">
+                                      <a href="/produnoredirect/<%= produn.id %>">
+                                          <img src="<%= produn.image %>" class="img img-responsive"/>
+                                      </a> 
+
+                                      <div class="product-price">
+                                          <a href="product_single.html">DSLR Camera</a><br />
+                                          <span class="prev-price">
+                                              <del></del>
+                                          </span>
+                                          <span class="current-price">
+                                              $<%= produn.price %>
+                                          </span>
+                                      </div>
+
+                                      <a class="btn btn-danger" href="/produno/delete/<%= produn.id %>">
+                                        Eliminar
+                                      </a>
+                                      <a class="btn btn-primary" href="/produno/edit/<%= produn.id %>">
+                                        Editar
+                                      </a>
+                                      <div class="clear"></div>
+                                  </div>
+                              </div> 
+          </div><!-- End Latest products[single] -->  
+          <% }) %>                           
+
+                          <div class="clear"></div>
+
+                      </div> <!-- End Latest products row-->
+                  
+                      <div class="clear"></div>
+                  </div> <!-- End products div-->
+              </div> <!-- End container latest products-->
+          </div>  <!-- End Latest products -->
+      </div>
+  </div>
+
+</div>
+   
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/_footer %>     

@@ -1,0 +1,99 @@
+<% include ../partials/_header %>
+
+<!-- Header part  -->
+
+
+<div class="content-area">
+    <div class="container">
+        <div class="cart-page">
+            <h2>Carro</h2>
+            <form action="checkout.html">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Productos</th>
+                            <th width="10%">Cantidad</th>
+                            <th width="20%"></th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+              <% if(products) { %>
+                <% for(var i = 0; i < products.length; i++) { %>
+                        <tr>
+                            <td>
+                                <img src="<%= products[i].item.image %>" width="50" alt="" class="img img-thumbnail pull-left">
+                                <span class="pull-left cart-product-option">
+
+                                    <strong><%= products[i].item.title %></strong><br />
+                                    <a href="/remove/<%= products[i].item._id %>" class="btn btn-red btn-sm">
+                                        Eliminar
+                                    </a>
+                                    
+
+                                </span>
+                                <div class="clearfix"></div>
+                            </td>
+
+                            
+                            <td>
+                                    <a href="/sumar/<%= products[i].item._id %>" class="btn btn-link text-danger"><i class="fas fa-chevron-up"></i></a>
+                                <%= products[i].qty %>
+                                <a href="/reduce/<%= products[i].item._id %>" class="btn btn-link text-danger"><i class="fas fa-chevron-down"></i></a></div>
+
+                            </td>
+
+
+                            <td></td>
+                            <td><p class="total_ammount_p1">$<%= products[i].price %></p></td>
+                        </tr>    
+                        <% } %> 
+                        
+                 
+           
+            
+                        
+
+                        <tr>
+                            <td></td>
+                            <td colspan="1"><strong>Total:</strong></td>
+                            <td></td>
+                            <td>
+                                <p><span class="total_product_sum">$<%= totalPrice %></span></p>
+                            </td>
+                            <% } else { %>   
+                                <% } %>
+                            <div class="clearfix"></div>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <a href="/prepagar" class="btn btn-yellow btn-lg pull-right margin-bottom-20" > Iniciar Compra </a>
+                                <a href="/" class="btn btn-success btn-lg pull-right margin-right-20">
+                                    <i class="fa fa-plus"></i> Seguir Comprando</a>
+
+                                    <div class="clearfix"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </form>
+            </div> <!--End Cart page-->
+            
+        </div> <!-- End Container inside Content Area -->
+    </div> <!-- End content Area class -->
+
+
+    
+    <div class="scroll">
+        <a href="#top" class="scroll-to-top hidden">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+</div> <!-- End wrapper -->
+
+<% include ../partials/_footer %>      

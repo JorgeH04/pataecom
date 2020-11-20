@@ -1,0 +1,98 @@
+<% include ../partials/_header %>
+
+
+
+<div class="col-md-4 mx-auto">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Agregue un nuevo producto</h3>
+    </div>
+    <div class="card-body">
+      <form action="/ofertatres/new-ofertatres" method="POST">
+
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="name" autofocus/>
+        </div>
+       <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="title" autofocus/>
+        </div>
+        <div class="form-group">
+            <input type="text" name="image" class="form-control" placeholder="imagen 1" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" autofocus/>
+          </div>
+                 <div class="form-group">
+            <input type="text" name="description" class="form-control" placeholder="descripcion" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="price" class="form-control" placeholder="precio" autofocus/>
+          </div>
+          <div class="form-group">
+              <input type="text" name="oldprice" class="form-control" placeholder="precio anterior" autofocus/>
+          </div>
+
+
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="latest-products">
+    <div class="container">
+        <h2 class="title-div wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s" data-wow-offset="10"></h2>
+        <div class="products">
+            <div class="row">
+                <% ofertatres.forEach(function (ofertatre) { %>
+                <div class="col-md-3">
+                    <div class="product-item">
+                        <div class="product-borde-inner">
+                            <a href="/ofertatresredirect/<%= ofertatre.id %>">
+                                <img src="<%= ofertatre.image %>" class="img img-responsive"/>
+                            </a> 
+                            <div class="product-price">
+                                <a href="product_single.html"><%= ofertatre.title %></a><br />
+                                <span class="prev-price">
+                                    <del>200$</del>
+                                </span>
+                                <span class="current-price">
+                                      <%= ofertatre.price %> $
+                                </span>
+                            </div>
+  
+                            <a class="btn btn-danger" href="/ofertatres/delete/<%= ofertatre.id %>">
+                              Eliminar
+                            </a>
+                            <a class="btn btn-primary" href="/ofertatres/edit/<%= ofertatre.id %>">
+                              Editar
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div> 
+                </div><!-- End Latest products[single] -->  
+                <% }) %>
+  
+                <div class="clearfix"></div>
+  
+            </div> <!-- End Latest products row-->
+           
+            <div class="clear"></div>
+        </div> <!-- End products div-->
+    </div> <!-- End container latest products-->
+  </div>  <!-- End Latest products -->
+
+
+
+ <% include ../partials/_footer %>
+        

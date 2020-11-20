@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Checkout Example</title>
+  </head>
+  <body class="jumbotron">
+
+      <div class="col-md-12 pt-4 pb-4">
+          <a href="/shopcart" class="btn btn-success check-out">Volver al carro</a>
+       </div>
+      <div class="container">
+        <div class=" text-center my-3 py-3 d-block">
+          <h3>Checkout form</h3>
+          <p class="lead">
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can be
+            triggered by attempting to submit the form without completing it.
+          </p>
+        </div>
+
+
+<main class="page col-md-12 col-lg-12">
+  <section class="shopping-cart dark">
+    <div class="container">
+         <div class="block-heading">
+           <h2>Mis Datos ><strong class="text"> Envío y Pago  </strong> </h2>
+         </div>
+         <div class="content">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+        
+            <div class="items">
+
+                <div class="card text-center">
+                    <div class="card-header">
+                      <h3>Medio de Pago</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/checkout" method="post">
+                          <label for="username">Username:</label>
+
+                          <div class="form-group">
+                              <select class="form-control">
+                                 <option value="">Moto</option>
+                                 <option value="">UBER</option>
+                                 <option value="">Correo Argentino</option>
+                               </select>
+                           </div>
+                           <div class="form-group">
+                              <button class="btn btn-primary btn-block" type="submit">
+                                Pagar con Mercado Pago
+                              </button>
+                            </div>
+
+                     </form>
+                 
+
+                    </div>
+
+                    <div class="card-body">
+                        <form action="/checkout" method="post">
+                          <label for="username">Podrás retirar tú pedido dentro de las 48hs de realizado el pago</label>
+
+                       
+                           <div class="form-group">
+                              <button class="btn btn-primary btn-block" type="submit">
+                                Retirar en el negocio
+                              </button>
+                            </div>
+
+                     </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="summary">
+              <h3>Detalles de la compra</h3>
+              <% if(products) { %>
+                <% for(var i = 0; i < products.length; i++) { %>
+              <div class="summary-item"><span class="text">Producto <%= i + 1%></span><span class="price"><%= products[i].item.title %></span></div>
+
+              <% } %>    
+
+
+
+              <div class="summary-item mt-5"><span class="text ">Total: </span><span class="price"> <%= total %> </span></div>
+
+              <% } else { %>                    
+
+                <% } %>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+ </section>
+</main>
+
+
+
+
+
+
+
+<script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"
+></script>
+<script
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"
+></script>
+<script>
+//Get the current year for the copyright
+$("#year").text(new Date().getFullYear());
+</script>
+</body>
+</html>

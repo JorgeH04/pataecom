@@ -1,0 +1,84 @@
+<% include ../partials/_header %>
+
+
+
+<div class="col-md-4 mx-auto">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Agregue un nuevo producto</h3>
+    </div>
+    <div class="card-body">
+      <form action="/prodtres/new-prodtres" method="POST">
+
+
+     
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="name" autofocus/>
+        </div>
+       <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="title" autofocus/>
+        </div>
+        <div class="form-group">
+            <input type="text" name="image" class="form-control" placeholder="imagen 1" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" autofocus/>
+          </div>
+                 <div class="form-group">
+            <input type="text" name="description" class="form-control" placeholder="descripcion" autofocus/>
+          </div>
+                 <div class="form-group">
+            <input type="text" name="price" class="form-control" placeholder="precio" autofocus/>
+          </div>
+
+
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+<div class="row mt-5">
+    <% prodtres.forEach(function (prodtre) { %>
+      <div class="col-md-3 ">
+       <div class="card"> 
+          <a href="/prodtresbackend/<%= prodtre.id %>">
+         <img class="card-img-top img-fluid" alt="img1" src="<%= prodtre.imagePath %>">
+          </a>
+          <div class="card-body">
+        <div class="card-heading"><%= prodtre.product %></div>
+        <h4> $<%= prodtre.price %>  </h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit neque, mollitia dolorem. </p>
+        <a class="btn btn-pink text-light"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a> </div>
+        <a class="btn btn-danger" href="/prodtres/delete/<%= prodtre.id %>">
+          Eliminar
+        </a>
+        <a class="btn btn-primary" href="/prodtres/edit/<%= prodtre.id %>">
+          Editar
+        </a>
+        </div>
+  </div>
+  <% }) %>
+
+
+
+</div>
+     
+</div>
+</div>
+
+
+
+        <% include ../partials/_footer %>
+        

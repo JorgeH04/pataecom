@@ -1,0 +1,74 @@
+<% include ../partials/_header %>
+
+
+<div class="content-area">
+
+    <div class="registration-page">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="text-center">Create Your Account</h2>
+                    <form action="/users/signup" method="POST">
+
+                        <div class="form-group row">
+                            <label for="firstname" class="col-sm-2 form-control-label">Nombres:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="name" class="form-control" id="firstname" placeholder="Juan Perez" name="name" minlength="2" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lastname" class="col-sm-2 form-control-label">Email:</label>
+                            <div class="col-sm-8">
+                                <input type="email" name="email" class="form-control" id="lastname" placeholder="test@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-2 form-control-label">Contraseña:</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="password" class="form-control email" id="email" placeholder="contraseña">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="username" class="col-sm-2 form-control-label">Confirmar Contraseña:</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="confirm_password" class="form-control" id="username" placeholder="confirmar contraseña">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-sm-2 form-control-label">Teléfono:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="number" class="form-control" id="password" placeholder="1130984629">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="confirm_password" class="col-sm-2 form-control-label">Dirección:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="address" id="confirm_password" placeholder="Montiel 1212, CABA">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <div class="col-sm-offset-2 col-sm-8">
+                                <button class="btn btn-success btn-lg btn-block"   >Registrarse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!--End Row-->
+
+        </div>
+    </div> <!--End Registration page div-->
+
+</div> <!-- End content Area class -->
+
+
+
+
+
+  <% include ../partials/_footer %>

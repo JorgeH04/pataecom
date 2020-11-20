@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMG || Papelería</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Content-Language" content="en-US" />
+    <meta name="description" content="Dynamic responsive Ecommerce free web template" />
+    <meta name="keywords" content="Ecommerce template, Ecommerce free responsive template, free template" />
+    <meta name="author" content="Maniruzzaman Akash">
+
+    <!-- CSS links -->
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    
+    <!-- Animate.css -->
+    <link type="text/css" rel="stylesheet" href="/css/animate.css" />
+
+    <!-- Owl Carousel CSS-->
+    <link type="text/css" rel="stylesheet" href="/css/owl.carousel.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/owl.theme.default.min.css" />
+
+    <link rel="icon" href="/images/logoo.png" />
+
+
+    <!-- Mega navigation bar -->
+    <link rel="stylesheet" type="text/css" media="all" href="/css/webslidemenu.css" />
+
+    <!-- Main css link -->
+    <link type="text/css" rel="stylesheet" href="/css/main.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header part  -->
+        <div class="header" id="top">
+            <!-- Start Top Header -->
+            <div class="top-header">
+                <div class="top-header-left pull-left">
+                    <a> CABA y GBA envío gratis en compras mayores a $2000. Resto del país envío gratis en compras mayores a $3500</a>
+                </div>
+                <div class="top-header-right pull-right">
+                    <div class="container-fluid">
+                        <ul>
+                           
+                            <li class="top-header-list">
+                                <a href="/shopcart">
+                                    <span class="icon"><i class="fa fa-credit-card"></i></span>
+                                    Carro 
+                                </a>
+                            </li>
+                            <li class="top-header-list"><a href="/contacto">
+                                <span class="icon"><i class="fa fa-question-circle"></i></span>
+                                Contacto
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!-- End Top Header -->
+
+
+            <!-- Start Header Main, logo, search bar,cart -->
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="header-logo pull-left">
+                        <a href="/">
+                            <img src="/images/logoo.png" >
+                        </a>
+                    </div>
+
+                    
+                    <div class="header-search pull-left">
+
+                            
+                            
+                       
+                    </div>
+
+                    
+
+
+                    <div class="header-cart">
+                        <a href="/shopcart/" class="cart-link" ><i class="fa fa-cart-arrow-down"></i></a>
+                        <% if(session.cart) { %>
+                        <span class="number-of-cart"><%= session.cart.totalQty%></span>
+                        <% } %>
+                    </div>
+
+                  
+
+        </div>
+    </div>
+    <!-- End Header Main, logo, search bar,cart -->
+
+
+
+
+
+    <div class="header-navigation">
+        <div class="wsmenucontainer clearfix">
+          <div class="overlapblackbg"></div>
+          <div class="wsmobileheader clearfix"> <a href="#" id="wsnavtoggle" class="animated-arrow"><span></span></a> <a class="smallogo"><img src="images/logo.png" alt=""></a></div>
+
+
+          <div class="headerfull"> 
+            <!--Main Menu HTML Code-->
+            <div class="wsmain">
+              <!-- <div class="smllogo"><a href="#"><img src="images/logo.jpg" alt=""></a></div> -->
+              <nav class="wsmenu clearfix">
+                <ul class="mobile-sub wsmenu-list">
+
+
+
+       <li><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#" class="navtext"><span>Escolar</span> <span>Brand</span></a>
+         <div class="wsshoptabing wtsbrandmenu clearfix">
+          <div class="wsshoptabingwp clearfix">
+           <ul class="wstabitem02 clearfix">
+             <li class="wsshoplink-active"><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-apple brandcolor01" aria-hidden="true"></i>Apple</a>
+              <div class="wsshoptab-active wstbrandbottom clearfix">
+               <ul class="wstliststy02">
+                <li class="wstheading">Apple Products </li>
+                <li><a href="#">List Products 01 </a> <span class="wstmenutag redtag">Popular</span></li>
+                <li><a href="#">List Products 02</a></li>
+                <li><a href="#">List Products 03</a></li>
+                <li><a href="#">List Products 04</a> </li>
+                <li><a href="#">List Products 05</a> </li>
+                <li><a href="#">List Products 06</a></li>
+            </ul>
+            <ul class="wstliststy02">
+                <li class="wstheading">Apple More Products</li>
+                <li><a href="#">List Products 07 </a></li>
+                <li><a href="#">List Products 08</a></li>
+                <li><a href="#">List Products 09</a></li>
+                <li><a href="#">List Products 10</a> </li>
+                <li><a href="#">List Products 11 </a></li>
+                <li><a href="#">List Products 12</a></li>
+            </ul>
+            <ul class="wstliststy02">
+                <li class="wstheading">Apple More Products</li>
+                <li><a href="#">List Products 13 </a> <span class="wstmenutag orangetag">20% off</span></li>
+                <li><a href="#">List Products 14</a></li>
+                <li><a href="#">List Products 15</a></li>
+                <li><a href="#">List Products 16</a> </li>
+                <li><a href="#">List Products 17</a></li>
+                <li><a href="#">List Products 18</a></li>
+            </ul>
+            <ul class="wstliststy02">
+                <li class="wstheading">Apple More Products</li>
+                <li><a href="#">List Products 19 </a> <span class="wstmenutag bluetag">Winter Offer</span></li>
+                <li><a href="#">List Products 20</a></li>
+                <li><a href="#">List Products 21</a></li>
+                <li><a href="#">List Products 22</a> </li>
+                <li><a href="#">List Products 23</a></li>
+                <li><a href="#">List Products 24</a></li>
+            </ul>
+        </div>
+    </li>
+    <li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-windows brandcolor02" aria-hidden="true"></i> Windows</a>
+        <div class="wstbrandbottom clearfix">
+          <ul class="wstliststy02">
+            <li class="wstheading">Windows Products </li>
+            <li><a href="#">List Products 25 <span class="wstmenutag bluetag">Popular</span></a></li>
+            <li><a href="#">List Products 26</a></li>
+            <li><a href="#">List Products 27</a> <span class="wstmenutag greentag">20% off</span></li>
+            <li><a href="#">List Products 28</a> </li>
+            <li><a href="#">List Products 29</a></li>
+            <li><a href="#">List Products 30</a></li>
+        </ul>
+        <ul class="wstliststy02">
+            <li class="wstheading">Windows More Products</li>
+            <li><a href="#">List Products 31 </a></li>
+            <li><a href="#">List Products 32</a></li>
+            <li><a href="#">List Products 33</a></li>
+            <li><a href="#">List Products 34</a> </li>
+            <li><a href="#">List Products 35 </a></li>
+            <li><a href="#">List Products 36</a></li>
+        </ul>
+        <ul class="wstliststy02">
+            <li class="wstheading">Windows More Products</li>
+            <li><a href="#">List Products 37 </a></li>
+            <li><a href="#">List Products 38</a></li>
+            <li><a href="#">List Products 39</a></li>
+            <li><a href="#">List Products 40</a> </li>
+            <li><a href="#">List Products 41</a></li>
+            <li><a href="#">List Products 42</a></li>
+        </ul>
+        <ul class="wstliststy02">
+            <li class="wstheading">Windows More Products</li>
+            <li><a href="#">List Products 43 </a></li>
+            <li><a href="#">List Products 44</a></li>
+            <li><a href="#">List Products 45</a></li>
+            <li><a href="#">List Products 46</a> </li>
+            <li><a href="#">List Products 47</a></li>
+            <li><a href="#">List Products 48</a></li>
+        </ul>
+    </div>
+</li>
+<li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-skype brandcolor03" aria-hidden="true"></i> Skype</a>
+    <div class="wstbrandbottom clearfix">
+      <ul class="wstliststy02">
+        <li class="wstheading">Skype Products </li>
+        <li><a href="#">List Products 49 </a></li>
+        <li><a href="#">List Products 50</a> <span class="wstmenutag redtag">Popular</span></li>
+        <li><a href="#">List Products 51</a></li>
+        <li><a href="#">List Products 52</a> </li>
+        <li><a href="#">List Products 53</a></li>
+        <li><a href="#">List Products 54</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Skype More Products</li>
+        <li><a href="#">List Products 55 </a></li>
+        <li><a href="#">List Products 56</a></li>
+        <li><a href="#">List Products 57</a></li>
+        <li><a href="#">List Products 58</a> </li>
+        <li><a href="#">List Products 59 </a></li>
+        <li><a href="#">List Products 60</a> <span class="wstmenutag orangetag">20% off</span></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Skype More Products</li>
+        <li><a href="#">List Products 61 </a></li>
+        <li><a href="#">List Products 62</a></li>
+        <li><a href="#">List Products 63</a></li>
+        <li><a href="#">List Products 64</a> </li>
+        <li><a href="#">List Products 65</a></li>
+        <li><a href="#">List Products 66</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Skype More Products</li>
+        <li><a href="#">List Products 67 </a> <span class="wstmenutag bluetag">Winter Offer</span></li>
+        <li><a href="#">List Products 68</a></li>
+        <li><a href="#">List Products 69</a></li>
+        <li><a href="#">List Products 70</a> </li>
+        <li><a href="#">List Products 71</a></li>
+        <li><a href="#">List Products 72</a></li>
+    </ul>
+</div>
+</li>
+<li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-paypal brandcolor04" aria-hidden="true"></i>Paypal</a>
+    <div class="wstbrandbottom clearfix">
+      <ul class="wstliststy02">
+        <li class="wstheading">Paypal Products </li>
+        <li><a href="#">List Products 73 <span class="wstmenutag bluetag">Popular</span></a></li>
+        <li><a href="#">List Products 74</a></li>
+        <li><a href="#">List Products 75</a></li>
+        <li><a href="#">List Products 76</a> </li>
+        <li><a href="#">List Products 77</a></li>
+        <li><a href="#">List Products 78</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Paypal More Products</li>
+        <li><a href="#">List Products 79 </a></li>
+        <li><a href="#">List Products 80</a></li>
+        <li><a href="#">List Products 81</a></li>
+        <li><a href="#">List Products 82</a> </li>
+        <li><a href="#">List Products 83 <span class="wstmenutag greentag">20% off</span></a></li>
+        <li><a href="#">List Products 84</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Paypal More Products</li>
+        <li><a href="#">List Products 85 </a></li>
+        <li><a href="#">List Products 86</a></li>
+        <li><a href="#">List Products 87</a></li>
+        <li><a href="#">List Products 89</a> </li>
+        <li><a href="#">List Products 90</a></li>
+        <li><a href="#">List Products 91</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Paypal More Products</li>
+        <li><a href="#">List Products 92 </a></li>
+        <li><a href="#">List Products 93</a></li>
+        <li><a href="#">List Products 94</a></li>
+        <li><a href="#">List Products 95</a> </li>
+        <li><a href="#">List Products 96</a></li>
+        <li><a href="#">List Products 97</a></li>
+    </ul>
+</div>
+</li>
+<li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-quora brandcolor05" aria-hidden="true"></i>Quora</a>
+    <div class="wstbrandbottom clearfix">
+      <ul class="wstliststy02">
+        <li class="wstheading">Amazon Products </li>
+        <li><a href="#">List Products 98 </a></li>
+        <li><a href="#">List Products 99</a></li>
+        <li><a href="#">List Products 00</a></li>
+        <li><a href="#">List Products 01</a> </li>
+        <li><a href="#">List Products 02</a> <span class="wstmenutag redtag">Popular</span></li>
+        <li><a href="#">List Products 03</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Amazon More Products</li>
+        <li><a href="#">List Products 04 <span class="wstmenutag orangetag">20% off</span></a></li>
+        <li><a href="#">List Products 05</a></li>
+        <li><a href="#">List Products 06</a></li>
+        <li><a href="#">List Products 07</a> </li>
+        <li><a href="#">List Products 08 </a></li>
+        <li><a href="#">List Products 09</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Amazon More Products</li>
+        <li><a href="#">List Products 10 </a></li>
+        <li><a href="#">List Products 11</a></li>
+        <li><a href="#">List Products 12</a></li>
+        <li><a href="#">List Products 13</a> </li>
+        <li><a href="#">List Products 14</a></li>
+        <li><a href="#">List Products 15</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Amazon More Products</li>
+        <li><a href="#">List Products 16 </a> <span class="wstmenutag bluetag">Winter Offer</span></li>
+        <li><a href="#">List Products 17</a></li>
+        <li><a href="#">List Products 18</a></li>
+        <li><a href="#">List Products 19</a> </li>
+        <li><a href="#">List Products 20</a></li>
+        <li><a href="#">List Products 21</a></li>
+    </ul>
+</div>
+</li>
+<li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-soundcloud brandcolor06"></i>Sound Cloud</a>
+    <div class="wstbrandbottom clearfix">
+      <ul class="wstliststy02">
+        <li class="wstheading">SoundCloud Products </li>
+        <li><a href="#">List Products 01 <span class="wstmenutag bluetag">Popular</span></a></li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a> </li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">SoundCloud More Products</li>
+        <li><a href="#">List Products 07 </a></li>
+        <li><a href="#">List Products 08</a></li>
+        <li><a href="#">List Products 09</a></li>
+        <li><a href="#">List Products 10</a> </li>
+        <li><a href="#">List Products 11 <span class="wstmenutag greentag">20% off</span></a></li>
+        <li><a href="#">List Products 12</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">SoundCloud More Products</li>
+        <li><a href="#">List Products 13 </a></li>
+        <li><a href="#">List Products 14</a></li>
+        <li><a href="#">List Products 15</a></li>
+        <li><a href="#">List Products 16</a> </li>
+        <li><a href="#">List Products 17</a></li>
+        <li><a href="#">List Products 18</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">SoundCloud More Products</li>
+        <li><a href="#">List Products 19 </a></li>
+        <li><a href="#">List Products 20</a></li>
+        <li><a href="#">List Products 21</a></li>
+        <li><a href="#">List Products 22</a> </li>
+        <li><a href="#">List Products 23</a></li>
+        <li><a href="#">List Products 24</a></li>
+    </ul>
+</div>
+</li>
+<li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-houzz brandcolor07"></i>Houzz</a>
+    <div class="wstbrandbottom clearfix">
+      <ul class="wstliststy02">
+        <li class="wstheading">Houzz Products </li>
+        <li><a href="#">List Products 01 </a></li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a> </li>
+        <li><a href="#">List Products 01</a> <span class="wstmenutag redtag">Popular</span></li>
+        <li><a href="#">List Products 01</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Houzz More Products</li>
+        <li><a href="#">List Products 07 <span class="wstmenutag orangetag">20% off</span></a></li>
+        <li><a href="#">List Products 08</a></li>
+        <li><a href="#">List Products 09</a></li>
+        <li><a href="#">List Products 10</a> </li>
+        <li><a href="#">List Products 11 </a></li>
+        <li><a href="#">List Products 12</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Houzz More Products</li>
+        <li><a href="#">List Products 13 </a></li>
+        <li><a href="#">List Products 14</a></li>
+        <li><a href="#">List Products 15</a></li>
+        <li><a href="#">List Products 16</a> </li>
+        <li><a href="#">List Products 17</a></li>
+        <li><a href="#">List Products 18</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Houzz More Products</li>
+        <li><a href="#">List Products 19 </a> <span class="wstmenutag bluetag">Winter Offer</span></li>
+        <li><a href="#">List Products 20</a></li>
+        <li><a href="#">List Products 21</a></li>
+        <li><a href="#">List Products 22</a> </li>
+        <li><a href="#">List Products 23</a></li>
+        <li><a href="#">List Products 24</a></li>
+    </ul>
+</div>
+</li>
+<li><span class="wsmenu-click02"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#"><i class="fa fa-get-pocket brandcolor08"></i>Get Pocket</a>
+    <div class="wstbrandbottom clearfix">
+      <ul class="wstliststy02">
+        <li class="wstheading">Get Pocket Products </li>
+        <li><a href="#">List Products 01 <span class="wstmenutag bluetag">Popular</span></a></li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a> </li>
+        <li><a href="#">List Products 01</a></li>
+        <li><a href="#">List Products 01</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Get Pocket More Products</li>
+        <li><a href="#">List Products 07 </a></li>
+        <li><a href="#">List Products 08</a></li>
+        <li><a href="#">List Products 09</a></li>
+        <li><a href="#">List Products 10</a> </li>
+        <li><a href="#">List Products 11 <span class="wstmenutag greentag">20% off</span></a></li>
+        <li><a href="#">List Products 12</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Get Pocket More Products</li>
+        <li><a href="#">List Products 13 </a></li>
+        <li><a href="#">List Products 14</a></li>
+        <li><a href="#">List Products 15</a></li>
+        <li><a href="#">List Products 16</a> </li>
+        <li><a href="#">List Products 17</a></li>
+        <li><a href="#">List Products 18</a></li>
+    </ul>
+    <ul class="wstliststy02">
+        <li class="wstheading">Get Pocket More Products</li>
+        <li><a href="#">List Products 19 </a></li>
+        <li><a href="#">List Products 20</a></li>
+        <li><a href="#">List Products 21</a></li>
+        <li><a href="#">List Products 22</a> </li>
+        <li><a href="#">List Products 23</a></li>
+        <li><a href="#">List Products 24</a></li>
+    </ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</li>
+
+<li><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#" class="navtext"><span>Papelería y escritura</span> <span>MegaMenu</span></a>
+    <div class="megamenu clearfix">
+
+
+        <ul class="wstliststy02">
+            <li class="wstheading"> Escritura </li>
+            <li><a href="/produnoindex/:1">Bolígrafos </a> <span class="wstmenutag redtag">Popular</span></li>
+            <li><a href="#">Marcadores</a></li>
+            <li><a href="#">List Products 03</a></li>
+            <li><a href="#">List Products 04</a> </li>
+            <li><a href="#">List Products 05</a> </li>
+            <li><a href="#">List Products 06</a></li>
+        </ul>
+        <ul class="wstliststy02">
+            <li class="wstheading">Paypal Products</li>
+            <li><a href="#">List Products 07 </a></li>
+            <li><a href="#">List Products 08</a></li>
+            <li><a href="#">List Products 09</a></li>
+            <li><a href="#">List Products 10</a> </li>
+            <li><a href="#">List Products 11 </a></li>
+            <li><a href="#">List Products 12</a></li>
+        </ul>
+        <ul class="wstliststy02">
+            <li class="wstheading">Sound Cloud Products</li>
+            <li><a href="#">List Products 13 </a> <span class="wstmenutag orangetag">20% off</span></li>
+            <li><a href="#">List Products 14</a></li>
+            <li><a href="#">List Products 15</a></li>
+            <li><a href="#">List Products 16</a> </li>
+            <li><a href="#">List Products 17</a></li>
+            <li><a href="#">List Products 18</a></li>
+        </ul>
+        <ul class="wstliststy02">
+            <li class="wstheading">Get Pocket Products</li>
+            <li><a href="#">List Products 19 </a> <span class="wstmenutag bluetag">Winter Offer</span></li>
+            <li><a href="#">List Products 20</a></li>
+            <li><a href="#">List Products 21</a></li>
+            <li><a href="#">List Products 22</a> </li>
+            <li><a href="#">List Products 23</a></li>
+            <li><a href="#">List Products 24</a></li>
+        </ul>
+
+
+    </div>
+</li>
+
+
+<li><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#" class="navtext"><span>Informática</span> <span>Half menu</span></a>
+    <div class="megamenu clearfix halfmenu">
+
+
+        <ul class="wstliststy06">
+            <li class="wstheading">Informática</li>
+            <li><a href="#">List Products 01 </a> <span class="wstmenutag redtag">Popular</span></li>
+            <li><a href="#">List Products 02</a></li>
+            <li><a href="#">List Products 03</a></li>
+            <li><a href="#">List Products 04</a> </li>
+            <li><a href="#">List Products 05</a> </li>
+            <li><a href="#">List Products 06</a></li>
+        </ul>
+        <ul class="wstliststy06">
+            <li class="wstheading">Apple More Products</li>
+            <li><a href="#">List Products 07 </a></li>
+            <li><a href="#">List Products 08</a></li>
+            <li><a href="#">List Products 09</a></li>
+            <li><a href="#">List Products 10</a> </li>
+            <li><a href="#">List Products 11 </a></li>
+            <li><a href="#">List Products 12</a></li>
+        </ul>
+
+
+
+
+    </div>
+</li>
+
+
+
+
+<% if(user) { %>
+
+
+<li class="wssearchbar clearfix">
+    <li>
+        <a href="/perfil/1"><i class="fas fa-user-edit mr-2"></i>Perfil</a>
+     </li>
+</li>
+
+
+<li class="wssearchbar clearfix">
+    <li>
+        <a href="/users/logout"><i class="fas fa-user-edit mr-2"></i> Logout</a>
+    </li>
+</li>
+
+ 
+
+<% } else { %>     
+
+
+    <li class="wssearchbar clearfix">
+        <li>
+            <a href="/users/signup"><i class="fas fa-user-edit mr-2"></i>  Registrate</a>
+        </li>
+        
+    </li>
+    
+    
+    <li class="wssearchbar clearfix">
+        <li>
+            <a href="/users/signin"><i class="fas fa-sign-in-alt mr-2"></i>  Login</a>
+        </li>
+    </li>
+
+
+    <li class="wsshopmyaccount clearfix"><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a href="#" class="wtxaccountlink"><i class="fa fa-align-justify"></i>Nosotros <i class="fa  fa-angle-down"></i></a>
+      <ul class="wsmenu-submenu">
+        <li><a href="account.html"><i class="fa fa-user"></i>Sobre Nosotros</a></li>
+        <li><a href="register.html"><i class="fa fa-black-tie"></i>Dónde estamos</a></li>
+        <li><a href="login.html"><i class="fa fa-sign-in"></i>Contacto</a></li>
+      </ul>
+   </li>
+
+
+    <% } %>
+
+<!-- <li class="wscarticon clearfix"> <a href="#"><i class="fa fa-shopping-basket"></i> <em class="roundpoint">8</em><span class="mobiletext">Shopping Cart</span></a> </li> -->
+</ul>
+</nav>
+</div>
+<!--Menu HTML Code--> 
+
+</div>
+</div>
+
+</div>  <!-- End Navigation header -->
+
+</div>
+<!-- Header part  -->

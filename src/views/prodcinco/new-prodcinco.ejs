@@ -1,0 +1,81 @@
+<% include ../partials/_header %>
+
+
+
+<div class="col-md-4 mx-auto">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Agregue un nuevo producto</h3>
+    </div>
+    <div class="card-body">
+      <form action="/prodcinco/new-prodcinco" method="POST">
+
+
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="name" autofocus/>
+        </div>
+       <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="title" autofocus/>
+        </div>
+        <div class="form-group">
+            <input type="text" name="image" class="form-control" placeholder="imagen 1" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagedos" class="form-control" placeholder="imagen 2" autofocus/>
+          </div>
+          <div class="form-group">
+            <input type="text" name="imagetres" class="form-control" placeholder="imagen 3" autofocus/>
+          </div>
+                 <div class="form-group">
+            <input type="text" name="description" class="form-control" placeholder="descripcion" autofocus/>
+          </div>
+                 <div class="form-group">
+            <input type="text" name="price" class="form-control" placeholder="precio" autofocus/>
+          </div>
+
+
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  
+<div class="row mt-5">
+    <% prodcinco.forEach(function (prodcinc) { %>
+      <div class="col-md-3 ">
+       <div class="card"> 
+          <a href="/prodcincobackend/<%= prodcinc.id %>">
+         <img class="card-img-top img-fluid" alt="img1" src="<%= prodcinc.imagePath %>">
+          </a>
+          <div class="card-body">
+        <div class="card-heading"><%= prodcinc.product %></div>
+        <h4> $<%= prodcinc.price %>  </h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit neque, mollitia dolorem. </p>
+        <a class="btn btn-pink text-light"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</a> </div>
+        <a class="btn btn-danger" href="/prodcinco/delete/<%= prodcinc.id %>">
+          Eliminar
+        </a>
+        <a class="btn btn-primary" href="/prodcinco/edit/<%= prodcinc.id %>">
+          Editar
+        </a>
+        </div>
+  </div>
+  <% }) %>
+
+
+
+</div>
+     
+</div>
+</div>
+
+
+
+        <% include ../partials/_footer %>
